@@ -1,36 +1,34 @@
-# Open questions and decisions
+# Decisions and open questions
 
-Tracks what must be settled before Phase 1 planning. Answers are recorded here as they arrive.
+## Decided
 
-## Blocking (required before planning)
-
-| # | Question | Answer |
-|---|----------|--------|
-| 1 | Master specification sections 1–29 (only section 30, skills/tooling, has been provided) | **Replaced** by a researched spec: `research/reports/UMIS master specification.md` (pending user review) |
-| 2 | Module scope (admissions, enrollment, curriculum, scheduling, grading/transcripts, fees, scholarships, faculty loading, HR/payroll, library, clinic, dormitory, alumni, public site, portals) | _pending_ |
-| 3 | Roles, and whether one user may hold several | _pending_ |
-| 4 | Country/regulatory context, grading scale, term structure, government reports | Grading scales and term types **configurable per institution**; **Philippines** (CHED, RA 10931, Data Privacy Act, BIR) |
-| 13 | Approval to install the nine skill repos at project level under the review conditions below | **Approved.** Done, see `01-development-environment.md` |
+| Topic | Decision |
+|-------|----------|
+| Name | **SMIS** (School Management Information System). The GitHub repository is still named `UMIS` until the owner renames it |
+| Scope | **Junior high and senior high only** (Grades 7–12), DepEd rules. Changed from university scope |
+| School type | **Public or private, as a setting** (public: no tuition, no-collection policy; private: tuition, cashiering, ESC / SHS Voucher) |
+| Number of schools | **One school** (campuses can be added later) |
+| Country | Philippines (DepEd, Data Privacy Act, BIR) |
+| Grading and terms | Versioned configuration; DepEd rules (DO 8 s.2015 legacy, DO 015 s.2026) as defaults |
+| Stack | Laravel 13 + PostgreSQL 16 + Inertia/Vue 3/TypeScript + Tailwind 4; Redis; Pest, Vitest, Playwright |
+| Specification | Researched by Claude (the earlier ChatGPT-written spec is not used) |
+| Skills | Nine skill repos installed at project level; see `01-development-environment.md` |
+| Pace | Pause for review after each phase; push after every working piece |
 
 ## Defaults (used unless overridden)
 
-| # | Topic | Default |
-|---|-------|---------|
-| 5 | Stack | **Decided (user left it to Claude):** Laravel 13 + PostgreSQL 16 + Inertia/Vue 3/TypeScript + Tailwind 4 |
-| 6 | Database | **PostgreSQL 16** everywhere, including tests |
-| 7 | Roles/permissions | `spatie/laravel-permission` |
-| 8 | Tenancy | One university, several campuses |
-| 9 | Payments | Cashier-recorded manually; gateway can be added later |
-| 10 | Email / SMS / files | Email to log, no SMS, files on local disk |
-| 11 | Pace | **Pause for review after each phase**; push after every working piece |
-| 12 | Branching | One branch and pull request per phase |
-| 14 | FinDesk | Separate codebase; reuse patterns (toasts, strict CSP, test setup), no business code |
+| Topic | Default |
+|-------|---------|
+| Roles/permissions | Scoped role assignments (custom table), separation of duties |
+| Payments | Manual cashier posting plus one gateway (PayMongo) |
+| Email / SMS / files | Email to log, SMS provider chosen later, files on local disk |
+| Branching | One branch and pull request per phase |
+| FinDesk | Separate codebase; no code copied |
 
-## Skill installation conditions (item 13)
+## Open
 
-- Install into this repo's `.claude/` only; no global changes.
-- Read each repo (hooks, scripts, MCP servers, permissions) before enabling it.
-- Never run an unreviewed remote install script.
-- Ask before enabling any hook that runs code automatically.
-- Mark a skill "not usable here" if it needs binaries or tools on the user's own machine (possible for REA, Graphify).
-- New skills load at session start, so they take effect from the next session.
+| Question | Status |
+|----------|--------|
+| Review of the SMIS master specification | Pending |
+| Items in the specification's verification register (DepEd orders read via secondary sources, BIR e-invoicing coverage) | Pending |
+| Optional hooks (Superpowers, Taste, Impeccable engine, REA MCP) | Pending approval |
