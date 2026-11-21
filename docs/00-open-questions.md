@@ -9,20 +9,20 @@ Tracks what must be settled before Phase 1 planning. Answers are recorded here a
 | 1 | Master specification sections 1–29 (only section 30, skills/tooling, has been provided) | _pending_ |
 | 2 | Module scope (admissions, enrollment, curriculum, scheduling, grading/transcripts, fees, scholarships, faculty loading, HR/payroll, library, clinic, dormitory, alumni, public site, portals) | _pending_ |
 | 3 | Roles, and whether one user may hold several | _pending_ |
-| 4 | Country/regulatory context, grading scale, term structure, government reports | _pending_ |
-| 13 | Approval to install the nine skill repos at project level under the review conditions below | _pending_ |
+| 4 | Country/regulatory context, grading scale, term structure, government reports | Grading scales and term types **configurable per institution**; regulatory context still pending |
+| 13 | Approval to install the nine skill repos at project level under the review conditions below | **Approved.** Done, see `01-development-environment.md` |
 
 ## Defaults (used unless overridden)
 
 | # | Topic | Default |
 |---|-------|---------|
-| 5 | Stack | Laravel 13 + Vue 3 + Bootstrap 5, server-rendered pages with Vue islands |
-| 6 | Database | MySQL in production, SQLite for tests |
+| 5 | Stack | **Decided (user left it to Claude):** Laravel 13 + PostgreSQL 16 + Inertia/Vue 3/TypeScript + Tailwind 4 |
+| 6 | Database | **PostgreSQL 16** everywhere, including tests |
 | 7 | Roles/permissions | `spatie/laravel-permission` |
 | 8 | Tenancy | One university, several campuses |
 | 9 | Payments | Cashier-recorded manually; gateway can be added later |
 | 10 | Email / SMS / files | Email to log, no SMS, files on local disk |
-| 11 | Pace | Push after every working piece |
+| 11 | Pace | **Pause for review after each phase**; push after every working piece |
 | 12 | Branching | One branch and pull request per phase |
 | 14 | FinDesk | Separate codebase; reuse patterns (toasts, strict CSP, test setup), no business code |
 

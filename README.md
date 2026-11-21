@@ -1,6 +1,6 @@
 # UMIS — University Management Information System
 
-Status: **pre-planning**. No application code yet.
+Status: **pre-planning**. Development environment and skills set up; no application code yet.
 
 Phase 1 planning (module dependency map, database schema and ERD, API architecture,
 role/permission matrix, development checklist) starts once the master specification
