@@ -6,10 +6,10 @@ Tracks what must be settled before Phase 1 planning. Answers are recorded here a
 
 | # | Question | Answer |
 |---|----------|--------|
-| 1 | Master specification sections 1–29 (only section 30, skills/tooling, has been provided) | _pending_ |
+| 1 | Master specification sections 1–29 (only section 30, skills/tooling, has been provided) | **Replaced** by a researched spec: `research/reports/UMIS master specification.md` (pending user review) |
 | 2 | Module scope (admissions, enrollment, curriculum, scheduling, grading/transcripts, fees, scholarships, faculty loading, HR/payroll, library, clinic, dormitory, alumni, public site, portals) | _pending_ |
 | 3 | Roles, and whether one user may hold several | _pending_ |
-| 4 | Country/regulatory context, grading scale, term structure, government reports | Grading scales and term types **configurable per institution**; regulatory context still pending |
+| 4 | Country/regulatory context, grading scale, term structure, government reports | Grading scales and term types **configurable per institution**; **Philippines** (CHED, RA 10931, Data Privacy Act, BIR) |
 | 13 | Approval to install the nine skill repos at project level under the review conditions below | **Approved.** Done, see `01-development-environment.md` |
 
 ## Defaults (used unless overridden)

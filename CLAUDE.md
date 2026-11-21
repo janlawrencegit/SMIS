@@ -1,6 +1,6 @@
 # UMIS — University Management Information System
 
-Status: pre-planning. See `docs/00-open-questions.md` and `docs/01-development-environment.md`.
+Status: pre-planning. Master spec: `docs/research/reports/UMIS master specification.md`. See `docs/00-open-questions.md` and `docs/01-development-environment.md`.
 
 - Stack: Laravel 13 + PostgreSQL 16 + Inertia/Vue 3/TypeScript + Tailwind 4; Redis; Pest, Vitest, Playwright.
 - Project skills live in `.claude/skills/`. Choose skills per task using the workflow table in
