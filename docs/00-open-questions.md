@@ -4,7 +4,7 @@
 
 | Topic | Decision |
 |-------|----------|
-| Name | **SMIS** (School Management Information System). The GitHub repository is still named `UMIS` until the owner renames it |
+| Name | **SMIS** (School Management Information System). GitHub repository renamed to `janlawrencegit/SMIS` |
 | Scope | **Junior high and senior high only** (Grades 7–12), DepEd rules. Changed from university scope |
 | School type | **Public or private, as a setting** (public: no tuition, no-collection policy; private: tuition, cashiering, ESC / SHS Voucher) |
 | Number of schools | **One school** (campuses can be added later) |

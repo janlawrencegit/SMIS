@@ -53,9 +53,8 @@ No plugin was enabled, so **no plugin hooks and no MCP servers are active**.
 
 Total: 36 skills.
 
-**Recognition by Claude Code.** Claude Code reads project skills when a session starts. They are expected to
-appear in the next session opened on this repository; this document will be updated once that is confirmed.
-Copying files is not the same as "recognized", and no skill is marked verified until then.
+**Recognition by Claude Code: verified.** After the session restarted, Claude Code listed all 36 project skills
+(also as `smis:`-scoped skills once the renamed repository was attached).
 
 ### Not installed, and why
 
@@ -99,7 +98,7 @@ No permissions were added to any `settings.json`.
 | Skills declaring hooks or tool permissions in their header | Only Taste, now removed |
 | `ui-ux-pro-max` search script, run from the repo root | Pass: returned style results for "university education dashboard" |
 | `graphify update` on a sample codebase | Pass: produced graph.json, graph.html, GRAPH_REPORT.md (sample output deleted afterwards) |
-| Skills recognised by Claude Code | **Pending**: needs a new session |
+| Skills recognised by Claude Code | **Pass**: all 36 listed after session restart |
 
 ## 7. Skill conflicts and resolutions
 
